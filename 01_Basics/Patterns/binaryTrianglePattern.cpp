@@ -41,3 +41,4 @@ int main()
     nBinaryTriangle(n);
     return 0;
 }
+
