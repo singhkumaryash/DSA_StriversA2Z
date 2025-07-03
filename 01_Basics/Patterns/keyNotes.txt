@@ -1,0 +1,39 @@
+All pattern questions have a general solution Approach.
+
+Approach : 
+
+1. Understand the Pattern:
+   - Observe rows, columns, symbols (stars, numbers, characters).
+   - Note symmetry, repetition, spacing, and direction (increasing/decreasing).
+
+2. Break the Pattern Down:
+   - Is it symmetric?
+   - Is there a mirror or reverse part?
+   - Does it use stars, numbers, or alphabets?
+
+3. Dry Run with Small n:
+   - Use n = 3 or 4 to manually analyze row/column behavior.
+
+4. Identify Loops:
+   - Outer loop → Rows
+   - Inner loop(s) → Columns (spaces, stars, numbers, etc.)
+
+General Rules : 
+
+There are 4 general rules for solving a pattern-based question : 
+
+1. We always use nested loops for printing the patterns. For the outer loop,
+   we count the number of lines/rows and loop for them.
+2. Next, for the inner loop, we focus on the number of columns and somehow
+   connect them to the rows by forming a logic such that for each row we 
+   get the required number of columns to be printed.
+3. We print the numbers inside the inner loop.
+4. Observe symmetry in the pattern or check if a pattern is a combination of 
+   two or more similar patterns.
+
+*Note : 
+1. For n rows pattern we need to find column dependency.
+2. For 2n row pattern we need to analyze pattern, example: if mirror then we reverse.
+3. for 2n column pattern we find the count of stars and spaces required beforehand.
+4. For n column pattern we need to find row dependency.
+
