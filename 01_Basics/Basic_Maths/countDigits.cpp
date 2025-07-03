@@ -12,7 +12,15 @@
 using namespace std;
 int countDigits(int n)
 {
-    return (log10(n) + 1);
+    // Brute Force : 
+    // int count=0;
+    // while(n>0){
+    //     count++;
+    //     n=n/10;
+    // }
+    // return count;
+
+    return (log10(n) + 1); // Optimal 
 }
 int main()
 {
@@ -23,3 +31,7 @@ int main()
 
     return 0;
 }
+
+// Time Complexity :
+// Brute Force = O(log10(n)) because 'n' is divided by 10 in every iteration.
+// Optimal = O(1) as in optimal approach arithmetic operation is evaluated.
