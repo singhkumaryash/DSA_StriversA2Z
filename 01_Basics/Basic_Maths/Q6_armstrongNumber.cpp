@@ -33,17 +33,17 @@ int main()
     int n;
     cout << "Enter N : ";
     cin >> n;
-    cout << "The number " << n << " is " 
-    << (isArmstrongNumber(n) ? "a Armstrong Number." : "not a Armstrong Number.") 
-    << endl;
+    cout << "The number " << n << " is "
+         << (isArmstrongNumber(n) ? "a Armstrong Number." : "not a Armstrong Number.")
+         << endl;
     return 0;
 }
 
-// Time Complexity : 
+// Time Complexity :
 
 // TC is O(log10(n)) as we run the loop for digits time, which is log10(n)+1.
 // Other operation are constant time so does not constitue to Big 0.
 
-// Space Complexity : 
+// Space Complexity :
 
 // SC is o(1) as constant space is used for storage.
