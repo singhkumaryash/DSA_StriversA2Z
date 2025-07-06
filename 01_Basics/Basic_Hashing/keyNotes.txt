@@ -1,0 +1,107 @@
+HASHING – KEY NOTES
+
+Hashing = Pre-storing + Fetching  
+It optimizes search/frequency problems from O(N) to O(1)/O(log N) in most cases.
+
+1. ARRAY HASHING
+   Use when: Array contains integers in a small known range.
+
+Example:
+int hash[1000001] = {0};
+for (int i = 0; i < n; i++) hash[arr[i]]++;
+cout << hash[x]; // Frequency of x
+
+ Time: O(1) per operation  
+ Space: O(K), where K = max value in array
+
+Array size limits:
+ • Local (inside function): up to 1e6  
+ • Global (outside main): up to 1e7
+
+2. CHARACTER HASHING
+
+  Uses ASCII Values 
+  
+  Case 1: Lowercase only
+   int hash[26] = {0};
+   hash[c - 'a']++;
+
+  Case 2: Uppercase only 
+   int hash[26] = {0};
+   hash[c - 'A']++;
+
+  Case 3: Mixed characters
+   int hash[256] = {0};
+   hash[c]++;
+
+
+3. MAP / UNORDERED_MAP (Dynamic Hashing)
+
+ Use when: Large/unbounded numbers, negative values, strings, or keys not suited for array hashing.
+
+Example:
+unordered_map<int, int> mp;
+for (int x : arr) mp[x]++;
+cout << mp[query];
+
+Time Complexity:
+ • unordered_map → O(1) average, O(N) worst  
+ • map           → O(log N) always
+
+ Use unordered_map by default; fall back to map if TLE occurs.
+
+4. HASHING VS BRUTE FORCE
+
+ Method        Time Complexity 
+
+ Brute Force     O(Q × N)        
+ Hashing         O(N + Q)        
+
+Where N = array size, Q = number of queries.
+
+5. HASHING WITH STRINGS
+
+unordered_map<char, int> mp;
+for (char c : str) mp[c]++;
+cout << mp['a'];
+
+Works with:
+ • char
+ • string
+ • int
+ • double
+
+(unordered_map does NOT support complex keys like pair<int, int>)
+
+6. COLLISION IN HASHING
+
+  Collision = Two keys map to the same index
+  Division Method: Use hash[key % size]
+  Handled using linear chaining (linked list)
+
+Example:
+arr = [28, 38, 48] → hash[8] += ... → all go to index 8
+
+  Worst case → O(N) (very rare in practice)
+
+7. WHEN TO USE WHAT
+ 
+     Use Case                     Technique        
+
+   Small int range               Array Hashing    
+   Large/unbounded values        unordered_map    
+   Ordered keys required         map              
+   Characters (any case)         int hash[256]    
+   Key = pair or tuple           map only         
+
+
+8. HASHING TEMPLATE
+
+ Step 1: Pre-store
+unordered_map<int, int> freq;
+for (int x : arr) freq[x]++;
+
+ Step 2: Fetch
+for (int q : queries) cout << freq[q] << endl;
+
+
