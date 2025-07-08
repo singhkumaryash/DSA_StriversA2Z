@@ -57,7 +57,7 @@ int main()
 // Total Comparisons : n(n-1)/2 in worst case ; where n is size of array.
 
 // Time Complexity :
-// TC is O(n^2) in worst, average and O(1) in best case, where 
+// TC is O(n^2) in worst, average and O(n) in best case, where 
 // n is the number of elements in the array.
 
 // Space Compexity :
