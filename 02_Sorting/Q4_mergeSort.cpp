@@ -82,4 +82,5 @@ int main()
 // n is the number of elements in the array.
 
 // Space Compexity :
-// SC is O(n) ; where n is size of array.
+// Auxiliary Stack Space : O(n) -> SC is O(n)
+// (because each recursive call adds one frame to the call stack)
