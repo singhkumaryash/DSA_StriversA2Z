@@ -1,3 +1,9 @@
+// Problem Statement : Given an array of integers called arr, sort the array 
+// in non-decreasing order using the quick sort algorithm .
+
+// A sorted array in non-decreasing order is an array where each element is 
+// greater than or equal to all preceding elements in the array
+
 #include <bits/stdc++.h>
 using namespace std;
 int quickSortHelper(vector<int> &arr, int low, int high)
