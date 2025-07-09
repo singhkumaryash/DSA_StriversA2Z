@@ -1,0 +1,110 @@
+SORTING - NOTES SUMMARY
+
+
+1. Selection Sort
+
+Time Complexity:
+- Worst Case: O(n^2)
+- Average Case: O(n^2)
+- Best Case: O(n^2)
+
+Space Complexity: O(1)
+
+Characteristics:
+- Stable: No (unless modified)
+- In-place: Yes
+- Comparison-based: Yes
+
+Key Notes:
+- Selects the minimum element in each pass and puts it at the correct position.
+- Swaps even when not necessary, making it inefficient for large datasets.
+- Not adaptive (doesn’t take advantage of existing order).
+
+
+2. Bubble Sort
+
+Time Complexity:
+- Worst Case: O(n^2)
+- Average Case: O(n^2)
+- Best Case: O(n)   (when array is already sorted)
+
+Space Complexity: O(1)
+
+Characteristics:
+- Stable: Yes
+- In-place: Yes
+- Comparison-based: Yes
+
+Key Notes:
+- Compares adjacent elements and swaps them if out of order.
+- Largest element bubbles to the end in each iteration.
+- Use of a swapped flag can optimize best-case performance to O(n).
+
+
+3. Insertion Sort
+
+Time Complexity:
+- Worst Case: O(n^2)
+- Average Case: O(n^2)
+- Best Case: O(n)   (when array is already sorted)
+
+Space Complexity: O(1)
+
+Characteristics:
+- Stable: Yes
+- In-place: Yes
+- Comparison-based: Yes
+
+Key Notes:
+- Builds sorted array one element at a time.
+- Efficient for small datasets or nearly sorted arrays.
+- Swap-based or shift-based variants exist (shift is generally faster).
+- Recursive implementation possible.
+
+
+
+4. Merge Sort
+
+Time Complexity:
+- Worst Case: O(n log n)
+- Average Case: O(n log n)
+- Best Case: O(n log n)
+
+Space Complexity: O(n)   (due to temporary array for merging)
+
+Characteristics:
+- Stable: Yes
+- In-place: No
+- Comparison-based: Yes
+
+Key Notes:
+- Divide-and-conquer algorithm.
+- Recursively divides the array, then merges sorted halves.
+- Performs well on large datasets and linked lists.
+- Requires auxiliary space for merging.
+
+
+
+5. Quick Sort 
+
+Time Complexity:
+- Worst Case: O(n^2)(rare, occurs on already sorted or reverse sorted arrays with bad pivot)
+- Average Case: O(n log n)
+- Best Case: O(n log n)
+
+Space Complexity:
+- O(log n) auxiliary (due to recursion stack)
+- O(n) in worst case (unbalanced partitions)
+
+Characteristics:
+- Stable: No
+- In-place: Yes
+- Comparison-based: Yes
+
+Key Notes:
+- Divide-and-conquer algorithm.
+- Chooses a pivot, partitions array into two subarrays, and recursively sorts them.
+- Faster than merge sort in practice due to in-place operation and less memory use.
+- Pivot selection is crucial: randomized or median-of-three pivot reduces worst-case chance.
+
+
