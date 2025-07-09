@@ -1,7 +1,7 @@
-// Problem Statement : Given an array of integers called arr, sort the array 
+// Problem Statement : Given an array of integers called arr, sort the array
 // in non-decreasing order using the quick sort algorithm .
 
-// A sorted array in non-decreasing order is an array where each element is 
+// A sorted array in non-decreasing order is an array where each element is
 // greater than or equal to all preceding elements in the array
 
 #include <bits/stdc++.h>
@@ -39,6 +39,7 @@ void quickSort(vector<int> &arr, int low, int high)
         quickSort(arr, partitionIndex + 1, high);
     }
 }
+
 int main()
 {
 
@@ -49,7 +50,7 @@ int main()
         cout << it << " ";
     }
     cout << "}" << endl;
-    quickSort(arr, 0, arr.size() - 1);
+    quickSort(arr,0,arr.size()-1);
     cout << "Array after sorting : { ";
     for (auto it : arr)
     {
