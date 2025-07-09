@@ -45,8 +45,8 @@ Each module includes:
 | Module No. | Module Name                           | Status        |
 |------------|---------------------------------------|---------------|
 | 01         | Basics                                | ✅ Completed  |
-| 02         | Sorting                               | 🟨 In Progress |
-| 03         | Arrays                                | 🔜 Upcoming   |
+| 02         | Sorting                               | ✅ Completed |
+| 03         | Arrays                                | 🟨 In Progress   |
 | 04         | Binary Search                         | 🔜 Upcoming   |
 | 05         | Strings                               | 🔜 Upcoming   |
 | 06         | Linked List                           | 🔜 Upcoming   |
