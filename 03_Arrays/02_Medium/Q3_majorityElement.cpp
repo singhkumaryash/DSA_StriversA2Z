@@ -60,7 +60,8 @@ int majorityElement(vector<int> &nums)
 
 int main()
 {
-    vector<int> arr = {2, 2, 1, 1, 1, 2, 2};
+    vector<int>
+        arr = {2, 2, 1, 1, 1, 2, 2};
     cout << "The majority element with more than n/2 occurences in the array is "
          << majorityElement(arr) << endl;
     cout << "The majority element with more than n/2 occurences in the array is "
