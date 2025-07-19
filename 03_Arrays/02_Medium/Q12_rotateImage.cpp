@@ -1,3 +1,10 @@
+// Rotate Image by 90 degree
+
+// Problem Statement : Given a matrix, your task is to rotate the matrix 90 degrees clockwise.
+
+// Input: matrix = [[1,2,3],[4,5,6],[7,8,9]]
+// Output: [[7,4,1],[8,5,2],[9,6,3]]
+
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -60,7 +67,7 @@ int main()
         }
         cout << endl;
     }
-    rotateImageBruteForce(matrix);
+    rotateImageOptimal(matrix);
 
     cout << "The Final matrix is: " << endl;
     for (auto it : matrix)
