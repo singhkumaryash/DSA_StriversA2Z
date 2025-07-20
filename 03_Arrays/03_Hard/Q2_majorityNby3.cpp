@@ -1,3 +1,15 @@
+// Majority Elements(N/3 times) | Elements that appears more than N/3 times in the array
+
+// Problem Statement : Given an array of N integers. Find the elements that appear more than
+// N/3 times in the array. If no such element exists, return an empty vector.
+
+// Input Format :  array[] = {11,33,33,11,33,11}
+// Result: 11 33
+// Explanation: Here we can see that the Count(11) = 3 and Count(33) = 3. Therefore, the count
+// of both 11 and 33 is greater than N/3 times. Hence, 11 and 33 is the answer
+
+// Solution :
+
 #include <iostream>
 #include <vector>
 #include <unordered_map>
@@ -137,11 +149,29 @@ vector<int> majorityElementOptimal(vector<int> &nums)
 
 int main()
 {
-    vector<int> arr = {2, 2, 3, 3, 2, 1, 1, 1};
-    vector<int> result = majorityElementBetter(arr);
+    vector<int> arr1 = {2, 2, 3, 3, 2, 1, 1, 1};
+    vector<int> result1 = majorityElementOptimal(arr1);
 
     cout << "The majority elements with more than n/3 occurrences in the array are: { ";
-    for (int num : result)
+    for (int num : result1)
+    {
+        cout << num << " ";
+    }
+    cout << "}" << endl;
+    vector<int> arr2 = {11, 33, 33, 11, 33, 11};
+    vector<int> result2 = majorityElementOptimal(arr2);
+
+    cout << "The majority elements with more than n/3 occurrences in the array are: { ";
+    for (int num : result2)
+    {
+        cout << num << " ";
+    }
+    cout << "}" << endl;
+    vector<int> arr3 = {1, 2, 3};
+    vector<int> result3 = majorityElementOptimal(arr3);
+
+    cout << "The majority elements with more than n/3 occurrences in the array are: { ";
+    for (int num : result3)
     {
         cout << num << " ";
     }
