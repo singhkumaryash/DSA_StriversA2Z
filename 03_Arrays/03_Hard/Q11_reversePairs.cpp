@@ -1,3 +1,17 @@
+// Count Reverse Pairs
+
+// Problem Statement: Given an array of numbers, you need to return the count of reverse pairs.
+// Reverse Pairs are those pairs where i<j and arr[i]>2*arr[j].
+
+// Input: nums = [2,4,3,5,1]
+// Output: 3
+// Explanation: The reverse pairs are:
+// (1, 4) --> nums[1] = 4, nums[4] = 1, 4 > 2 * 1
+// (2, 4) --> nums[2] = 3, nums[4] = 1, 3 > 2 * 1
+// (3, 4) --> nums[3] = 5, nums[4] = 1, 5 > 2 * 1
+
+// Solution :
+
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -26,7 +40,7 @@ int countPairs(vector<int> &arr, int low, int mid, int high)
     int right = mid + 1;
     for (int i = low; i <= mid; i++)
     {
-        while (right <= high && (long long)arr[i] > 2LL * arr[right])
+        while (right <= high && (long long)arr[i] > 2LL * arr[right]) // long long to avoid integer overflow
         {
             right++;
         }
