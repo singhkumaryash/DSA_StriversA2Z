@@ -36,7 +36,7 @@ int inversionCountBruteForce(vector<int> &arr)
     }
     return count;
 }
-
+// Optimal Approach (Using Merge Sort)
 int merge(vector<int> &arr, int low, int mid, int high)
 {
     int count = 0;
