@@ -1,29 +1,29 @@
-// Implement Lower Bound
+// Implement Upper Bound
 
-// Problem Statement : Given a sorted array of N integers and an integer x, write a program
-// to find the lower bound of x.
+// Problem Statement : Given a sorted array of N integers and an integer x, write a program to
+// find the upper bound of x.
 
-// The lower bound is the smallest index, where arr[index] >= x. But if any such index is
-// not found, the lower bound algorithm returns n i.e. size of the given array.
+// The upper bound is the smallest index, where arr[index] > x. But if any such index is
+// not found, the upper bound algorithm returns n i.e. size of the given array.
 
-// Input Format: N = 5, arr[] = {}, x = 9
-// Result: 3
-// Explanation: Index 3 is the smallest index such that arr[3] >= x.
+// Input Format: N = 6, arr[] = {3,5,8,9,15,19}, x = 9
+// Result: 4
+// Explanation: Index 4 is the smallest index such that arr[4] > x.
 
-// Solution :
+//  Solution :
 
 #include <iostream>
 #include <vector>
 using namespace std;
 
 // BRUTE FORCE (Linear Search)
-int lowerBoundBruteForce(vector<int> &nums, int x)
+int upperBoundBruteForce(vector<int> &nums, int x)
 {
     int n = nums.size();
 
     for (int i = 0; i < n; i++)
     {
-        if (nums[i] >= x)
+        if (nums[i] > x)
         {
             return i;
             ;
@@ -33,7 +33,7 @@ int lowerBoundBruteForce(vector<int> &nums, int x)
 }
 
 // OPTIMAL APPROACH (Binary Search)
-int lowerBound(vector<int> &nums, int x)
+int upperBound(vector<int> &nums, int x)
 {
     int n = nums.size();
     int low = 0;
@@ -42,7 +42,7 @@ int lowerBound(vector<int> &nums, int x)
     while (low <= high)
     {
         int mid = low + (high - low) / 2;
-        if (nums[mid] >= x)
+        if (nums[mid] > x)
         {
             index = mid;
             high = mid - 1;
@@ -58,12 +58,12 @@ int lowerBound(vector<int> &nums, int x)
 int main()
 {
     vector<int> nums = {3, 5, 8, 15, 19};
-    int x = 9;
-    cout << "The lower bound is the index " << lowerBound(nums, x) << endl;
+    int x = 8;
+    cout << "The upper bound is the index " << upperBound(nums, x) << endl;
     return 0;
 }
 
-// LOwer Bound – Time and Space Complexity Analysis
+// upper Bound – Time and Space Complexity Analysis
 
 // 1. BRUTE FORCE (Linear Search)
 //    - Time Complexity : O(N)
