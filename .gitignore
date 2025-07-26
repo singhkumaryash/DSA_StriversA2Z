@@ -1,0 +1,17 @@
+# Ignore all files and folders by default
+**
+
+# But allow key file types and folders
+!*/
+!**/*.cpp
+!**/*.h
+!**/*.txt
+!**/*.md
+!**/.gitignore
+
+# Ignore common binaries
+**/a.out
+**/main
+
+# Ignore VS Code config completely
+.vscode/
