@@ -37,6 +37,8 @@ int countOccurrences(vector<int> &nums, int target)
     int high = nums.size() - 1;
     int first = -1;
     int last = -1;
+
+    // first occurrence
     while (low <= high)
     {
         int mid = low + (high - low) / 2;
@@ -60,6 +62,8 @@ int countOccurrences(vector<int> &nums, int target)
     }
     low = 0; // resassigned low and high for finding last occurence
     high = nums.size() - 1;
+
+    // last occurrence
     while (low <= high)
     {
         int mid = low + (high - low) / 2;
