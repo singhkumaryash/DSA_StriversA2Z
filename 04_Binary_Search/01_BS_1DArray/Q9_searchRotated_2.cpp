@@ -76,9 +76,11 @@ int main()
 // - Time Complexity:
 //     - Best/Average Case: O(log N)
 //         When elements are mostly unique, binary search halves the space effectively.
-//     - Worst Case: O(N)
-//         When many elements are duplicates (e.g., nums[low] == nums[mid] == nums[high]),
-//         the algorithm degrades to linear scan as we eliminate only one element per step.
-//
+//     - Worst Case: O(N/2) = ~ O(N)
+//         In the worst-case scenario, where all array elements are the same but not the
+//         target (e.g., given array = {3, 3, 3, 3, 3, 3, 3}), we continue to reduce the
+//         search space by adjusting the low and high pointers until they intersect. This
+//         worst-case situation incurs a time complexity of O(N/2).
+
 // - Space Complexity: O(1)
 //     - No extra space used — the algorithm operates in constant space.
