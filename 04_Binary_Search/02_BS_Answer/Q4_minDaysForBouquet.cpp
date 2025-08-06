@@ -78,7 +78,7 @@ int minDays(vector<int> &bloomDay, int m, int k)
         int mid = low + (high - low) / 2;
         if (isPossible(bloomDay, m, k, mid) == true)
         {
-            ans = mid; // if possible stores to answer and move to left to find minimum
+            ans = mid; // if possible store answer and move to left to find minimum
             high = mid - 1;
         }
         else
