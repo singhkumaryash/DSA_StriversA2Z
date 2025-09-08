@@ -41,6 +41,17 @@ int main()
 {
     string s = "(()())(())";
     string ans = removeOuterParentheses(s);
-    cout << ans<< endl;
+    cout << ans << endl;
     return 0;
 }
+
+// Time and Space Complexity:
+
+//    - Time Complexity : O(N)
+//        We iterate through the string once.
+//        Each operation (increment, decrement, push_back) is O(1).
+//        Total = O(N), where N = length of s.
+
+//    - Space Complexity : O(N)
+//        The output string ans requires O(N) in the worst case.
+//        Auxiliary space (for count variable) is O(1).
