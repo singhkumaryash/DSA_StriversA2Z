@@ -57,4 +57,4 @@ int main()
 //        O(N), for hashing the strings.
 //        O(26) => O(1), for comparing the hash of the two strings.
 //    - Space Complexity : O(1)
-//        Two Fixed size Hash Array used with respect to strings.
+//        Two Fixed size Hash Array used of size 26.
