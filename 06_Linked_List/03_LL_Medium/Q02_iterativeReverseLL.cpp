@@ -1,3 +1,14 @@
+// Reverse a Linked List
+
+// Problem Statement : Problem Statement: Given the head of a singly linked list, 
+// write a program to reverse the linked list, and return the head pointer to the 
+// reversed list.
+
+// Input: head = [1,2,3,4,5]
+// Output: [5,4,3,2,1]
+
+// Solution : 
+
 #include <iostream>
 #include <vector>
 #include<stack>
@@ -87,7 +98,7 @@ ListNode *reverseList(ListNode *head)
 
 int main()
 {
-        
+
     vector<int> arr = {1, 2, 3, 4, 5};
     ListNode *linkedList = convertArray2LL(arr);
     display(linkedList);
