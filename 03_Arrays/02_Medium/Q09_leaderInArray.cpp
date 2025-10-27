@@ -14,8 +14,8 @@
 
 // Solution :
 
-#include <bits/stdc++.h>
-using namespace std;
+#include <iostream>
+ using namespace std;
 
 // Brute Force Approach
 vector<int> findLeadersBruteForce(vector<int> &a)
